@@ -38,10 +38,12 @@ LOCAL_C_INCLUDES := \
 	$(LOCAL_PATH)/include \
 	$(LOCAL_PATH)/ncurses
 
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
+
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libncurses
 
-include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_STATIC_LIBRARY)
 
 # Copy only basic terminal type definitions as ncurses-base in debian does by default.
 # https://salsa.debian.org/debian/ncurses/-/blob/master/debian/rules#L179

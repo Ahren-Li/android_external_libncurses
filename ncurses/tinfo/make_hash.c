@@ -244,7 +244,7 @@ get_type(int type_mask)
 }
 
 int
-main(int argc, char **argv)
+main_C(int argc, char **argv)
 {
     unsigned tablesize = CAPTABSIZE;
     struct user_table_entry *name_table = typeCalloc(struct
